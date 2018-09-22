@@ -89,16 +89,16 @@ TEST_CASE ( "Rectangle CalculateArea function", "[CalculateArea]") {
 
 
 TEST_CASE ( "Rectangle Expand function", "[Expand]") {
-  Point point1;
-  Point point2;
+  Point point1; // top left
+  Point point2; // bottom right
   point1.x = 1;
   point1.y = 7;
   point2.x = 9;
   point2.y = 1;
   Rectangle rectangle(point1, point2);
 
-  Point newP1;
-  Point newP2;
+  Point newP1; // new bottom left
+  Point newP2; // new top right
   newP1.x = 0;
   newP1.y = 0;
   newP2.x = 10;
@@ -113,16 +113,16 @@ TEST_CASE ( "Rectangle Expand function", "[Expand]") {
 }
 
 TEST_CASE ( "Rectangle Shrink function", "[Shrink]") {
-  Point point1;
-  Point point2;
+  Point point1; // top left
+  Point point2; // bottom right
   point1.x = 1;
   point1.y = 7;
   point2.x = 9;
   point2.y = 1;
   Rectangle rectangle(point1, point2);
 
-  Point newP1;
-  Point newP2;
+  Point newP1; // new bottom left
+  Point newP2; // new top right
   newP1.x = 2;
   newP1.y = 2;
   newP2.x = 8;
