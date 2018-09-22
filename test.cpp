@@ -75,3 +75,14 @@ TEST_CASE ( "Rectangle Overlaps function", "[overlaps]") {
   REQUIRE( rectangle.Overlaps(rectangle4) == false);
   
 }
+
+TEST_CASE ( "Rectangle CalculateArea function", "[CalculateArea]") {
+  Point point1;
+  Point point2;
+  point1.x = 1;
+  point1.y = 2;
+  point2.x = 5;
+  point2.y = 9;
+  Rectangle rectangle(point1, point2);
+  REQUIRE( rectangle.CalculateArea() == (rectangle.GetHeight() * rectangle.GetWidth()) );
+}
