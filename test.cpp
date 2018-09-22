@@ -80,9 +80,57 @@ TEST_CASE ( "Rectangle CalculateArea function", "[CalculateArea]") {
   Point point1;
   Point point2;
   point1.x = 1;
-  point1.y = 2;
-  point2.x = 5;
-  point2.y = 9;
+  point1.y = 7;
+  point2.x = 9;
+  point2.y = 1;
   Rectangle rectangle(point1, point2);
   REQUIRE( rectangle.CalculateArea() == (rectangle.GetHeight() * rectangle.GetWidth()) );
+}
+
+
+TEST_CASE ( "Rectangle Expand function", "[Expand]") {
+  Point point1;
+  Point point2;
+  point1.x = 1;
+  point1.y = 7;
+  point2.x = 9;
+  point2.y = 1;
+  Rectangle rectangle(point1, point2);
+
+  Point newP1;
+  Point newP2;
+  newP1.x = 0;
+  newP1.y = 0;
+  newP2.x = 10;
+  newP2.y = 8;
+  Rectangle rectangle2(newP1, newP2);
+  rectangle.Expand();
+  REQUIRE( rectangle.get_p1().x == rectangle2.get_p1().x);
+  REQUIRE( rectangle.get_p1().y == rectangle2.get_p1().y);
+  REQUIRE( rectangle.get_p2().x == rectangle2.get_p2().x);
+  REQUIRE( rectangle.get_p2().y == rectangle2.get_p2().y);
+
+}
+
+TEST_CASE ( "Rectangle Shrink function", "[Shrink]") {
+  Point point1;
+  Point point2;
+  point1.x = 1;
+  point1.y = 7;
+  point2.x = 9;
+  point2.y = 1;
+  Rectangle rectangle(point1, point2);
+
+  Point newP1;
+  Point newP2;
+  newP1.x = 2;
+  newP1.y = 2;
+  newP2.x = 8;
+  newP2.y = 6;
+  Rectangle rectangle2(newP1, newP2);
+  rectangle.Shrink();
+  REQUIRE( rectangle.get_p1().x == rectangle2.get_p1().x);
+  REQUIRE( rectangle.get_p1().y == rectangle2.get_p1().y);
+  REQUIRE( rectangle.get_p2().x == rectangle2.get_p2().x);
+  REQUIRE( rectangle.get_p2().y == rectangle2.get_p2().y);
 }
