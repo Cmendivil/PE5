@@ -77,24 +77,24 @@ TEST_CASE ( "Rectangle Overlaps function", "[overlaps]") {
 }
 
 TEST_CASE ( "Rectangle CalculateArea function", "[CalculateArea]") {
-  Point point1;
-  Point point2;
+  Point point1; // bottom left
+  Point point2; // top right
   point1.x = 1;
-  point1.y = 7;
+  point1.y = 1;
   point2.x = 9;
-  point2.y = 1;
+  point2.y = 7;
   Rectangle rectangle(point1, point2);
   REQUIRE( rectangle.CalculateArea() == (rectangle.GetHeight() * rectangle.GetWidth()) );
 }
 
 
 TEST_CASE ( "Rectangle Expand function", "[Expand]") {
-  Point point1; // top left
-  Point point2; // bottom right
+  Point point1; // bottom left
+  Point point2; // top right
   point1.x = 1;
-  point1.y = 7;
+  point1.y = 1;
   point2.x = 9;
-  point2.y = 1;
+  point2.y = 7;
   Rectangle rectangle(point1, point2);
 
   Point newP1; // new bottom left
@@ -109,16 +109,15 @@ TEST_CASE ( "Rectangle Expand function", "[Expand]") {
   REQUIRE( rectangle.get_p1().y == rectangle2.get_p1().y);
   REQUIRE( rectangle.get_p2().x == rectangle2.get_p2().x);
   REQUIRE( rectangle.get_p2().y == rectangle2.get_p2().y);
-
 }
 
 TEST_CASE ( "Rectangle Shrink function", "[Shrink]") {
-  Point point1; // top left
-  Point point2; // bottom right
+  Point point1; // bottom left
+  Point point2; // top right
   point1.x = 1;
-  point1.y = 7;
+  point1.y = 1;
   point2.x = 9;
-  point2.y = 1;
+  point2.y = 7;
   Rectangle rectangle(point1, point2);
 
   Point newP1; // new bottom left
