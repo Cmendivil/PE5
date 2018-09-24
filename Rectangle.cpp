@@ -83,8 +83,7 @@ void Rectangle::Expand() {
 		p1_.y += 1;
 		p2_.x += 1;
 		p2_.y -= 1;
-}
-
+	}
 }
 
 /*
