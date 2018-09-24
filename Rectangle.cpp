@@ -76,8 +76,8 @@ void Rectangle::Expand() {
 		p1_.y -= 1;
 		p2_.x += 1;
 		p2_.y += 1;
-	// the inputs are p1=top left and p2=bottom right
 	}
+	// the inputs are p1=top left and p2=bottom right
 	if (p2_.x > p1_.x && p1_.y > p2_.y) {
 		p1_.x -= 1;
 		p1_.y += 1;
@@ -96,8 +96,8 @@ void Rectangle::Shrink() {
 		p1_.y += 1;
 		p2_.x -= 1;
 		p2_.y -= 1;
-	// the inputs are p1=top left and p2=bottom right
 	}
+	// the inputs are p1=top left and p2=bottom right
 	if (p2_.x > p1_.x && p1_.y > p2_.y) {
 		p1_.x += 1;
 		p1_.y -= 1;
