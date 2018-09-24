@@ -31,6 +31,7 @@ Rectangle::Rectangle(Point p1, Point p2) {
 
 /*
 returns the width between p1.x and p2.x
+this could have returned a negative in the bad code
 */
 int Rectangle::GetWidth() {
 	return abs(p1_.x - p2_.x);
@@ -38,6 +39,7 @@ int Rectangle::GetWidth() {
 
 /*
 returns the height between p1.y and p2.y
+this could have returned a negative in the bad code
 */
 int Rectangle::GetHeight() {
 	return abs(p1_.y - p2_.y);
@@ -68,6 +70,7 @@ int Rectangle::CalculateArea() {
 
 /*
 increase the rectangle size
+expand didn't know the two cases for point starting location in the bad code 
 */
 void Rectangle::Expand() {
 	// the inputs are p1=bottom left, and p2=top right
@@ -88,6 +91,7 @@ void Rectangle::Expand() {
 
 /*
 decrease the rectangle size
+shrink didn't know the two cases for point starting location in the bad code
 */
 void Rectangle::Shrink() {
 	// the inputs are p1=bottom left, and p2=top right
