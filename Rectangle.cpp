@@ -48,10 +48,12 @@ other is the other point you're comapring it to
 returns a bool if any point overlaps
 */
 bool Rectangle::Overlaps(Rectangle& other) {
-	if (p1_.x > other.p2_.x || other.p1_.x > p2_.x) {
+	Point p1 = other.get_p1();
+	Point p2 = other.get_p2();
+	if (p1_.x <= p1.x && p1_.y <= p1.y && p1.x <= p2_.x && p1.y <= p2_.y) {
 		return true;
 	} 
-	if (p1_.y < other.p2_.y || other.p1_.y < p2_.y) {
+	if (p1.x <= p1_.x && p1.y <= p1_.y && p2.x >= p1_.x && p2.y >= p1_.y) {
 		return true;
 	}
 	return false;

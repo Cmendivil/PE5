@@ -86,7 +86,7 @@ TEST_CASE ( "Rectangle Overlaps function", "[overlaps]") {
   Rectangle rectangle3(point3, point4); //rectangle for test2
   REQUIRE( rectangle.Overlaps(rectangle3) == true);
   point3.x = 3;
-  point4.y = 3; 
+  point3.y = 3; 
   Rectangle rectangle4(point3, point4); //rectangle for test3
   REQUIRE( rectangle.Overlaps(rectangle4) == false);
   
