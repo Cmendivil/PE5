@@ -17,8 +17,8 @@ struct Point {
 
 class Rectangle {
 public:
-  // p1 is the upper left corner
-  // p2 is the lower right corner
+  // p1 is the bottom left corner
+  // p2 is the upper right corner
   Rectangle(Point p1, Point p2);
 
   // get the width of the rectangle  

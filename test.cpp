@@ -60,7 +60,7 @@ TEST_CASE ( "Rectangle height function", "[getheight]") {
   point4.x = 4;
   point4.y = 6;
   Rectangle rectangle2(point3, point4);
-  REQUIRE( rectangle2.GetHeight() == std::abs(point3.y - point4.y)); // can return negative!!!!
+  REQUIRE( rectangle2.GetHeight() == std::abs(point3.y - point4.y)); // can return negative (!!UNSURE!!)
 }
 
 TEST_CASE ( "Rectangle Overlaps function", "[overlaps]") {
@@ -89,6 +89,7 @@ TEST_CASE ( "Rectangle Overlaps function", "[overlaps]") {
   point3.y = 3; 
   Rectangle rectangle4(point3, point4); //rectangle for test3
   REQUIRE( rectangle.Overlaps(rectangle4) == false);
+  REQUIRE( rectangle2.Overlaps(rectangle3) == false); // touching corners (2,2) should fail
   
 }
 
