@@ -89,7 +89,7 @@ TEST_CASE ( "Rectangle Overlaps function", "[overlaps]") {
   point3.y = 3; 
   Rectangle rectangle4(point3, point4); //rectangle for test3
   REQUIRE( rectangle.Overlaps(rectangle4) == false);
-  REQUIRE( rectangle2.Overlaps(rectangle3) == false); // touching corners (2,2) should fail
+  REQUIRE( rectangle2.Overlaps(rectangle3) == true); // touching corners (2,2)
   
 }
 
